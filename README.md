@@ -12,3 +12,10 @@
         </tr>
     </table>
 </body>
+
+# UAS
+## Soal Ujian
+![gambar 00](ss/soal.PNG)
+### Stuktur Package dan Modul
+![gambar 01](ss/modul.PNG)
+
