@@ -80,3 +80,80 @@ def mencari():
     else:
         print("'{}' Tidak ditemukan.".format(nim))
 ```
+<p>
+<p>
+
+- <b>Package view</b> saya membuat 2 file python input_nilai dan view_nilai, input_nilai berisi fungsi untuk memasukan data.<p>
+- codingan dari fungsi file <b>input_nilai.py</b><p>
+```bash
+# Mencari Data Mahasiswa
+def mencari():
+    print("Mencari Data Mahasiswa")
+    print("="*40)
+    nim = input("Masukan NIM untuk mencari")
+    print("\nHasil")
+    print("="*68)
+    print("|    NIM    |      Nama      | Tugas |  UTS  |  UAS  | Akhir |")
+    print("="*68)
+    if nim in mahasiswa.keys():
+        print("| {0:9} | {1:14} | {2:5} | {3:5} | {4:5} | {5:5}".format(nim, mahasiswa[nim][1], mahasiswa[nim][2], mahasiswa[nim][3], mahasiswa[nim][4], mahasiswa[nim][5]))
+        print("-"*68)
+    else:
+        print("'{}' Tidak ditemukan.".format(nim))
+
+
+# Input Data
+def input_nim():
+    print("\nMasukan data mahasiswa")
+    global nim
+    nim = input("\nNIM: ")
+    return nim
+
+def input_nama():
+    global nama
+    nama = input("\nNama: ")
+    return nama
+
+def input_tugas():
+    global tugas
+    tugas = int(input("Masukan nilai tugas: "))
+    return tugas
+
+def input_uts():
+    global uts
+    uts = int(input("Masukan nilai UTS: "))
+    return uts
+
+def input_uas():
+    global uas
+    uas = int(input("Masukan nilai UAS: "))
+    return uas
+
+def input_akhir():
+    global akhir
+    akhir = (tugas *.3 + uts *.35 + uas * .35)
+    return akhir
+```
+<p>
+<p>
+
+- file python dari view_nilai berisi fungsi untuk menampilkan data dari proses di atas<p>
+- codingan dari file <b>view_nilai.py</b><p>
+```bash
+# Menampilkan Data Mahasiswa
+from model.daftar_nilai import mahasiswa
+
+def lihat():
+    print("Daftar Nilai")
+    print("="*68)
+    print("| No |    NIM    |      Nama      | Tugas |  UTS  |  UAS  | Akhir |")
+    print("="*68)
+    if mahasiswa.keys():
+        no = 1
+        for tabel in mahasiswa.values():
+            print("| {0:2} | {1:9} | {2:14} | {3:5} | {4:5} | {5:5} | {6:5}".format(no, tabel[0], tabel[1], tabel[2], tabel[3], tabel[4], tabel[5]))
+            print("-"*68)
+            no += 1
+    else :
+        print("     DATA TIDAK DI TEMUKAN       ")
+```
