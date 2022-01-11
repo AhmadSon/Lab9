@@ -195,3 +195,27 @@ while True:
 <p>
 <p>
 
+## Hasil Program
+- <b>Tambah Data: </b><p>
+
+![gambar 02](ss/pilihan_t.PNG)<P>
+![gambar 03](ss/ditambah_3_nim.PNG)<p>
+
+- <b>Ubah Data: </b><p>
+
+![gambar 04](ss/pilihan_u.PNG)<p>
+
+- <b>Hapus Data: </b><p>
+
+![gambar 05](ss/pilihan_h.PNG)<p>
+
+- <b>Cari Data: </b><p>
+
+![gambar 06](ss/pilihan_c.PNG)<p>
+
+- <b>Keluar Program: </b><p>
+
+![gambar 07](ss/pilihan_k.PNG)<p>
+
+
+# END
