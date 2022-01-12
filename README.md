@@ -219,3 +219,5 @@ while True:
 
 
 # END
+
+![gambar 08](ss/anime-love.gif)<p>
